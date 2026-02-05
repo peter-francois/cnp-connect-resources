@@ -1,4 +1,4 @@
-# CNP-Connect, Documentation du projet
+# CNP-Connect, documentation du projet
 
 Ce dépôt regroupe l’ensemble des **ressources de conception, modélisation et documentation** du projet **CNP-Connect**.
 
@@ -22,6 +22,18 @@ CNP-Connect est une application web interne destinée aux entreprises de transpo
 Elle permet notamment :
 - aux **agents de terrain** de consulter leurs affectations et recevoir des alertes,  
 - aux **superviseurs** et aux **coordinateurs** de suivre la disponibilité des équipes en temps réel et de réaffecter des agents si nécessaire.
+
+---
+
+## 🛠️ Stack technique
+### Frontend
+- React, TypeScript, Vite, Tailwind
+- Axios, TanStack Query, React Hook Form, Zod
+
+### Backend
+- Node.js, NestJS
+- Prisma, MySQL
+- JWT, Guards, Middlewares
 
 ---
 
@@ -83,6 +95,11 @@ La documentation des endpoints décrit :
 - les verbes HTTP,
 - les paramètres attendus,
 - et les réponses de l’API.
+
+---
+
+## 🏗️ Architecture
+- Architecture multicouche (3-tiers)
 
 ---
 
