@@ -1,36 +1,40 @@
 # CNP-Connect, documentation du projet
 
-Ce dépôt regroupe l’ensemble des **ressources de conception, modélisation et documentation** du projet **CNP-Connect**.
+Ce dépôt regroupe l’ensemble des **ressources de conception, modélisation et documentation**, ainsi que certains fichiers d’orchestration et de configuration (ex : docker-compose) du projet **CNP-Connect**.
 
 Il est conçu comme un point d’entrée clair pour comprendre le projet sans avoir à lire le code source.
 
-Il complète les dépôts de code (Frontend et Backend) en présentant la réflexion, la conception et l’architecture du projet.  
+Il complète les dépôts de code (Frontend et Backend) en présentant la réflexion, la conception et l’architecture du projet.
 
 ---
 
 ## 🔗 Liens vers les repos de code
 
-- Frontend : https://github.com/peter-francois/cnp-connect-frontend  
+- Frontend : https://github.com/peter-francois/cnp-connect-frontend
 - Backend : https://github.com/peter-francois/cnp-connect-backend
 
 ---
 
 ## 📱 Description de l’application
 
-CNP-Connect est une application web interne destinée aux entreprises de transport en commun.  
+CNP-Connect est une application web interne destinée aux entreprises de transport en commun.
 
 Elle permet notamment :
-- aux **agents de terrain** de consulter leurs affectations et recevoir des alertes,  
+
+- aux **agents de terrain** de consulter leurs affectations et recevoir des alertes,
 - aux **superviseurs** et aux **coordinateurs** de suivre la disponibilité des équipes en temps réel et de réaffecter des agents si nécessaire.
 
 ---
 
 ## 🛠️ Stack technique
+
 ### Frontend
+
 - React, TypeScript, Vite, Tailwind
 - Axios, TanStack Query, React Hook Form, Zod
 
 ### Backend
+
 - Node.js, NestJS
 - Prisma, MySQL
 - JWT, Guards, Middlewares
@@ -38,10 +42,13 @@ Elle permet notamment :
 ---
 
 ## 📁 Organisation du dépôt
+
 ```
 cnp-connect-docs/
 │
 ├── 01_conception/
+│ ├── backlog/
+│ ├── wireframes/
 │ ├── wireframes/
 │ └── user_stories/
 │
@@ -70,8 +77,10 @@ cnp-connect-docs/
 ## 📐 Conception
 
 Ce dossier contient :
+
 - Les **wireframes** réalisés sur Excalidraw,
-- Des exemples de **maquettes** réalisés avec Figma,
+- Des exemples de **maquettes** (mock-ups) réalisés avec Figma,
+- Un exemple de **diagramme de séquence** (sequence_diagrams) réalisés avec websequencediagrams,
 - Les **user stories** formalisant les besoins utilisateurs.
 
 Ces éléments montrent la démarche de conception en amont du développement.
@@ -81,9 +90,10 @@ Ces éléments montrent la démarche de conception en amont du développement.
 ## 🗄️ Modélisation (MERISE)
 
 Le projet s’appuie sur une modélisation MERISE comprenant :
+
 - **MCD (Modèle Conceptuel des Données)**
 - **MLD (Modèle Logique des Données)**
-- **MPD (Modèle Physique des Données)** sous MySQL Workbench  
+- **MPD (Modèle Physique des Données)** sous MySQL Workbench
 - Un **script SQL** permettant de recréer la base.
 
 ---
@@ -91,6 +101,7 @@ Le projet s’appuie sur une modélisation MERISE comprenant :
 ## 🌐 API — Endpoints
 
 La documentation des endpoints décrit :
+
 - les routes principales du backend,
 - les verbes HTTP,
 - les paramètres attendus,
@@ -99,6 +110,7 @@ La documentation des endpoints décrit :
 ---
 
 ## 🏗️ Architecture
+
 - Architecture multicouche (3-tiers)
 
 ---
@@ -106,6 +118,7 @@ La documentation des endpoints décrit :
 ## 🚀 DevOps
 
 Le projet intègre :
+
 - des **Dockerfiles** pour le front et le back,
 - une configuration **Nginx** pour servir le frontend,
 - une **pipeline GitLab CI/CD** pour build, test et publication des images.
@@ -116,8 +129,8 @@ Le projet intègre :
 
 Si vous avez des questions ou souhaitez échanger sur le projet :
 
-- **Email :** contact@peterfrancois.dev 
-- **LinkedIn :** https://www.linkedin.com/in/peterfrancois  
-- **GitHub :** https://github.com/peter-francois  
+- **Email :** contact@peterfrancois.dev
+- **LinkedIn :** https://www.linkedin.com/in/peterfrancois
+- **GitHub :** https://github.com/peter-francois
 
 N’hésitez pas à ouvrir une issue si vous souhaitez discuter du projet.

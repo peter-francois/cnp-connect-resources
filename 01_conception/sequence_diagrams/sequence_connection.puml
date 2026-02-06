@@ -1,0 +1,40 @@
+@startuml
+title Connexion utilisateur
+
+participant Utilisateur
+participant FrontEnd as FE
+participant BackEnd as BE
+participant Database as DB
+
+Utilisateur -> FE: Saisie des identifiants\n& clic sur "Se connecter"
+FE -> BE: POST /api/signin\nBody: email + mot de passe
+
+BE -> BE: Vérification DTO
+
+alt DTO invalide
+    BE -->> FE: 412 Precondition Failed
+else DTO valide
+    note over BE, DB: Requête SQL exécutée
+    BE -> DB: getUserByEmail(email)
+    DB -->> BE: user? (found / not found)
+
+    alt Utilisateur non trouvé
+        BE -->> FE: 404 Not Found
+    else Utilisateur trouvé
+        BE -> BE: Vérification du mot de passe
+
+        alt Mot de passe incorrect
+            BE -->> FE: 400 Bad credentials
+        else Mot de passe correct
+            BE -> BE: Génération tokens (access + refresh)\nCréation sessionId
+
+            BE -> DB: Stockage refreshToken\navec sessionId
+            DB -->> BE: OK
+
+            BE -->> FE: 200 OK\nSet-Cookie(refreshToken)\nBody: accessToken + message
+            FE -->> Utilisateur: Connexion réussie
+        end
+    end
+end
+
+@enduml
