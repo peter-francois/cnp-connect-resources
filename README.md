@@ -4,7 +4,7 @@ Ce dépôt regroupe l’ensemble des **ressources de conception, modélisation e
 
 Il est conçu comme un point d’entrée clair pour comprendre le projet sans avoir à lire le code source.
 
-Il complète les dépôts de code (Frontend et Backend) en présentant la réflexion, la conception et l’architecture du projet.
+Il vient compléter les dépôts de code (Frontend et Backend) en présentant la réflexion, la conception et l’architecture du projet.
 
 ---
 
@@ -48,28 +48,21 @@ cnp-connect-docs/
 │
 ├── 01_conception/
 │ ├── backlog/
-│ ├── wireframes/
-│ ├── wireframes/
-│ └── user_stories/
+│ ├── mock_ups/
+│ ├── sequence_diagrams/
+│ └── wireframes/
 │
-├── 02_modelisation/
+├── 02_database_modeling/
 │ └── merise/
-|   ├── CNP_connect_MCD.jpg
-|   ├── CNP_connect_MLD.jpg
-│   ├── CNP-Connect_MPD.mwb
-│   └── cnp_connect_mpd.sql
 │
 ├── 03_api/
 │ └── endpoints.pdf
 │
 ├── 04_architecture/
-│ └── architecture.md
 │
 └── 05_devops/
-├── docker/
-│ └── notes_docker.md
-└── cicd/
-  └── gitlab-ci.md
+  ├── compose/
+  └── proxy/
 ```
 
 ---
@@ -80,8 +73,8 @@ Ce dossier contient :
 
 - Les **wireframes** réalisés sur Excalidraw,
 - Des exemples de **maquettes** (mock-ups) réalisés avec Figma,
-- Un exemple de **diagramme de séquence** (sequence_diagrams) réalisés avec websequencediagrams,
-- Les **user stories** formalisant les besoins utilisateurs.
+- Des exemples de **diagramme de séquence** (sequence_diagrams) réalisés avec sur VSCode en PlantUML,
+- Les **user stories** priorisées (backlog) formalisant les besoins utilisateurs.
 
 Ces éléments montrent la démarche de conception en amont du développement.
 
@@ -100,18 +93,21 @@ Le projet s’appuie sur une modélisation MERISE comprenant :
 
 ## 🌐 API — Endpoints
 
-La documentation des endpoints décrit :
+La documentation des endpoints détaille :
 
-- les routes principales du backend,
-- les verbes HTTP,
-- les paramètres attendus,
-- et les réponses de l’API.
+- Les routes principales du backend
+- Les verbes HTTP
+- Les paramètres attendus
+- Les réponses de l’API
 
 ---
 
 ## 🏗️ Architecture
 
-- Architecture multicouche (3-tiers)
+Les shémas de l'architecture pour :  
+- L'architecture globale  
+- L'architecture du frontend
+- L'architecture du backend
 
 ---
 
@@ -119,9 +115,8 @@ La documentation des endpoints décrit :
 
 Le projet intègre :
 
-- des **Dockerfiles** pour le front et le back,
-- une configuration **Nginx** pour servir le frontend,
-- une **pipeline GitLab CI/CD** pour build, test et publication des images.
+- les fichiers **docker-compose** (dev/prod) pour exécuter la stack,
+- le **docker-compose** du **reverse proxy (Nginx Proxy Manager)**,
 
 ---
 
@@ -134,3 +129,4 @@ Si vous avez des questions ou souhaitez échanger sur le projet :
 - **GitHub :** https://github.com/peter-francois
 
 N’hésitez pas à ouvrir une issue si vous souhaitez discuter du projet.
+
