@@ -1,48 +1,47 @@
-# CNP-Connect, documentation du projet
+# CNP-Connect – Project Documentation
 
-Ce dépôt regroupe l’ensemble des **ressources de conception, modélisation et documentation**, ainsi que certains fichiers d’orchestration et de configuration (ex : docker-compose) du projet **CNP-Connect**.
+This repository gathers all **design, modeling, and documentation resources**, as well as some orchestration and configuration files (e.g., docker-compose) for the **CNP-Connect** project.
 
-Il est conçu comme un point d’entrée clair pour comprendre le projet sans avoir à lire le code source.
+It is intended as a clear entry point to understand the project without having to read the source code.
 
-Il vient compléter les dépôts de code (Frontend et Backend) en présentant la réflexion, la conception et l’architecture du projet.
-
----
-
-## 🔗 Liens vers les repos de code
-
-- Frontend : https://github.com/peter-francois/cnp-connect-frontend
-- Backend : https://github.com/peter-francois/cnp-connect-backend
+It complements the code repositories (Frontend and Backend) by presenting the project’s reflection, design, and architecture.
 
 ---
 
-## 📱 Description de l’application
+## 🔗 Links to Code Repositories
 
-CNP-Connect est une application web interne destinée aux entreprises de transport en commun.
-
-Elle permet notamment :
-
-- aux **agents de terrain** de consulter leurs affectations et recevoir des alertes,
-- aux **superviseurs** et aux **coordinateurs** de suivre la disponibilité des équipes en temps réel et de réaffecter des agents si nécessaire.
+- **Frontend:** https://github.com/peter-francois/cnp-connect-frontend  
+- **Backend:** https://github.com/peter-francois/cnp-connect-backend  
 
 ---
 
-## 🛠️ Stack technique
+## 📱 Application Overview
+
+CNP-Connect is an internal web application designed for public transportation companies.
+
+It allows:
+
+- **Field agents** to view their assignments and receive alerts,  
+- **Supervisors** and **coordinators** to monitor team availability in real time and reassign agents when necessary.  
+
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
 
-- React, TypeScript, Vite, Tailwind
-- Axios, TanStack Query, React Hook Form, Zod
+- React, TypeScript, Vite, Tailwind  
+- Axios, TanStack Query, React Hook Form, Zod  
 
 ### Backend
 
-- Node.js, NestJS
-- Prisma, MySQL
-- JWT, Guards, Middlewares
+- Node.js, NestJS  
+- Prisma, MySQL  
+- JWT, Guards, Middlewares  
 
 ---
 
-## 📁 Organisation du dépôt
-
+## 📁 Repository Structure
 ```
 cnp-connect-docs/
 │
@@ -61,72 +60,72 @@ cnp-connect-docs/
 ├── 04_architecture/
 │
 └── 05_devops/
-  ├── compose/
-  └── proxy/
+├── compose/
+└── proxy/
 ```
 
 ---
 
-## 📐 Conception
+## 📐 Design
 
-Ce dossier contient :
+This folder contains:
 
-- Les **wireframes** réalisés sur Excalidraw,
-- Des exemples de **maquettes** (mock-ups) réalisés avec Figma,
-- Des exemples de **diagramme de séquence** (sequence_diagrams) réalisés avec sur VSCode en PlantUML,
-- Les **user stories** priorisées (backlog) formalisant les besoins utilisateurs.
+- **Wireframes** created with Excalidraw,  
+- **Mock-ups** created with Figma,  
+- **Sequence diagrams** created in VSCode using PlantUML,  
+- Prioritized **user stories** (backlog) formalizing user needs.  
 
-Ces éléments montrent la démarche de conception en amont du développement.
-
----
-
-## 🗄️ Modélisation (MERISE)
-
-Le projet s’appuie sur une modélisation MERISE comprenant :
-
-- **MCD (Modèle Conceptuel des Données)**
-- **MLD (Modèle Logique des Données)**
-- **MPD (Modèle Physique des Données)** sous MySQL Workbench
-- Un **script SQL** permettant de recréer la base.
+These elements illustrate the design approach prior to development.
 
 ---
 
-## 🌐 API — Endpoints
+## 🗄️ Modeling (MERISE)
 
-La documentation des endpoints détaille :
+The project is based on MERISE modeling, including:
 
-- Les routes principales du backend
-- Les verbes HTTP
-- Les paramètres attendus
-- Les réponses de l’API
+- **MCD (Conceptual Data Model)**  
+- **MLD (Logical Data Model)**  
+- **MPD (Physical Data Model)** created in MySQL Workbench  
+- An **SQL script** to recreate the database  
+
+---
+
+## 🌐 API – Endpoints
+
+The endpoint documentation details:
+
+- Main backend routes,  
+- HTTP verbs,  
+- Expected parameters,  
+- API responses.  
 
 ---
 
 ## 🏗️ Architecture
 
-Les shémas de l'architecture pour :  
-- L'architecture globale  
-- L'architecture du frontend
-- L'architecture du backend
+This section contains diagrams for:
+
+- The **global architecture**,  
+- The **frontend architecture**,  
+- The **backend architecture**.  
 
 ---
 
 ## 🚀 DevOps
 
-Le projet intègre :
+The project includes:
 
-- les fichiers **docker-compose** (dev/prod) pour exécuter la stack,
-- le **docker-compose** du **reverse proxy (Nginx Proxy Manager)**,
+- **docker-compose** files (dev/prod) to run the stack,  
+- A **docker-compose** setup for the **reverse proxy (Nginx Proxy Manager)**.  
 
 ---
 
 ## 📬 Contact
 
-Si vous avez des questions ou souhaitez échanger sur le projet :
+If you have any questions or would like to discuss the project:
 
-- **Email :** contact@peterfrancois.dev
-- **LinkedIn :** https://www.linkedin.com/in/peterfrancois
-- **GitHub :** https://github.com/peter-francois
+- **Email:** contact@peterfrancois.dev  
+- **LinkedIn:** https://www.linkedin.com/in/peterfrancois  
+- **GitHub:** https://github.com/peter-francois  
 
-N’hésitez pas à ouvrir une issue si vous souhaitez discuter du projet.
-
+Feel free to open an issue if you would like to discuss the project.
