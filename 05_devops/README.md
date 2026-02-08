@@ -48,7 +48,7 @@ The deployment infrastructure is:
 
 ---
 
-## 📁 Contenu du dossier
+## 📁 Folder structure
 
 05_devops/  
 │  
