@@ -1,6 +1,6 @@
 # CNP-Connect – Project Documentation
 
-This repository gathers all **design, modeling, and documentation resources**, as well as some orchestration and configuration files (e.g., docker-compose) for the **CNP-Connect** project.
+This repository contain all **design, modeling, and documentation resources**, as well as some orchestration and configuration files (e.g., docker-compose) for the **CNP-Connect** project.
 
 It is intended as a clear entry point to understand the project without having to read the source code.
 
@@ -66,7 +66,7 @@ cnp-connect-docs/
 
 ---
 
-## 📐 Design
+## 📐 Conception
 
 This folder contains:
 
@@ -129,3 +129,4 @@ If you have any questions or would like to discuss the project:
 - **GitHub:** https://github.com/peter-francois  
 
 Feel free to open an issue if you would like to discuss the project.
+
