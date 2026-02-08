@@ -1,50 +1,50 @@
-# DevOps du projet CNP-Connect
+# DevOps for the CNP-Connect project
 
-Ce dossier regroupe les **fichiers d’orchestration et de déploiement** du projet CNP-Connect, principalement basés sur **Docker et Docker Compose**.  
-Il complète la documentation globale du projet en montrant comment l’application est exécutée et déployée.
+This folder brings together the **orchestration** and **deployment** files for the **CNP-Connect** project, mainly based on **Docker** and **Docker Compose**.
+It complements the project’s overall documentation by showing how the application is run and deployed.
 
 ---
 
-## 🎯 Objectif
+## 🎯 Objective
 
-Ce dossier sert à documenter et centraliser :
+This folder is used to document and centralize:
 
-- les fichiers **docker-compose** pour exécuter la stack,
-- le **docker-compose** du **reverse proxy (Nginx Proxy Manager)**,
+- the **docker-compose** files to run the stack,
+- the **docker-compose** for the **reverse proxy** (Nginx Proxy Manager).
 
 ---
 
 ## 🐳 Docker Compose
 
-Le dossier `compose/` contient les fichiers `docker-compose` permettent de lancer localement (ou sur serveur) :
+The `compose/` folder contains the `docker-compose` files used to run locally (or on a server):
 
-- le **Frontend** (React + Nginx),
-- le **Backend** (NestJS),
-- la **Base de données MySQL**.
+- the **Frontend** (React + Nginx),
+- the **Backend** (NestJS),
+- the **MySQL database**.
 
 ---
 
 ## 🔁 Reverse Proxy — Nginx Proxy Manager
 
-Le dossier `proxy/` contient un `docker-compose` permettant de déployer Nginx Proxy Manager.
+The `proxy/` folder contains a `docker-compose` file to deploy Nginx Proxy Manager.
 
-Rôles principaux :
-- gérer les domaines,
-- activer automatiquement HTTPS (Let’s Encrypt),
-- rediriger le trafic vers :
-  - le frontend,
-  - le backend.
+Main roles:
+- manage domains,
+- automatically enable HTTPS (Let’s Encrypt),
+- route traffic to:
+  - the frontend,
+  - the backend.
 
 ---
 
-## ☁️ Déploiement
+## ☁️ Deployment
 
-L’infrastructure de déploiement est :
+The deployment infrastructure is:
 
-- Serveur : AWS (EC2),
+- Server : AWS (EC2),
 - Reverse Proxy : Nginx Proxy Manager,
 - Orchestration : Docker Compose,
-- HTTPS : Certificats Let’s Encrypt via NPM.
+- HTTPS : Let’s Encrypt certificates via Nginx Proxy Manager.
 
 ---
 
